@@ -19,6 +19,9 @@ York.
 -   Build a Multiple Linear Regression model to estimate profit.
 -   Compare profitability across states.
 -   Present findings through an interactive Power BI dashboard.
+-   Compare actual profits with predicted profits for each startup.
+-   Visualize the differences between actual and predicted values.
+-   Understand how regression analysis can support profit estimation and business planning.
 
 ## Tools and Technologies
 
@@ -71,6 +74,37 @@ The report contains **2 dashboard pages**:
 -   Helps explore spending patterns alongside company profit.
 -   Supports discussion of budget allocation and cost management.
 
+## Page 3: Regression Analysis
+
+This page focuses on evaluating the Multiple Linear Regression model developed to predict startup profits using Research and Development (R&D) Spend, Administration Spend, and Marketing Spend.
+
+### Visualizations
+
+#### 1. Actual vs. Predicted Profit – Clustered Column Chart
+
+This chart compares the actual profit and predicted profit for each startup using side-by-side columns.
+
+**Purpose:**
+- Compare actual and predicted profits startup by startup.
+- Identify startups where predicted profit is close to actual profit.
+- Highlight startups with larger differences between actual and predicted values.
+
+#### 2. Actual vs. Predicted Profit – Scatter Chart
+
+This scatter chart plots actual profit on the X-axis and predicted profit on the Y-axis. Each point represents a startup.
+
+**Interpretation:**
+- Points closer to the ideal diagonal line indicate better agreement between actual and predicted profits.
+- Points above the ideal line indicate overprediction.
+- Points below the ideal line indicate underprediction.
+- Larger gaps from the ideal line indicate larger prediction errors.
+
+### Key Insights
+- The model estimates startup profits using R&D Spend, Administration Spend, and Marketing Spend.
+- Comparing actual and predicted profits helps visualize the model's estimates.
+- The charts make it easier to identify startups with larger prediction differences.
+- Regression analysis can help businesses understand spending patterns and estimate potential profitability.
+
 ## Key Project Highlights
 
 -   Analyzed **50 records** across **3 states**.
@@ -80,6 +114,12 @@ The report contains **2 dashboard pages**:
     and expenditure analysis.
 -   Used data visualization and regression analysis to support
     data-driven business discussions.
+
+### Business Value
+
+This analysis demonstrates how machine learning can be used to estimate startup profitability based on business expenditure. These estimates can support financial planning and spending decisions, alongside other business factors.
+
+**Note:** The visual comparison alone does not establish how well the model performs on unseen data. Metrics such as R², Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE) should be calculated on a separate test dataset to evaluate model performance reliably.
 
 ## How to Run the Python Analysis
 
@@ -105,6 +145,7 @@ The report contains **2 dashboard pages**:
 
 ``` text
 Regression-Analysis-Profit-Analysis/
+├── Screenshots/
 ├── startup.csv
 ├── Profit Analysis.pbix
 ├── README.md
@@ -130,3 +171,4 @@ spending-related patterns easier to review.
 
 **Project Type:** Data Analytics \| **Focus:** Regression Analysis,
 Profit Analysis, Data Visualization
+
